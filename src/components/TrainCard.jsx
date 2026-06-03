@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TrainCard = ({ train }) => {
-  // Рахуємо загальну кількість вільних місць у потягу
+  // Підраховуємо загальну кількість вільних місць у всіх вагонах потяга
   const totalSeats = train.wagons.reduce((sum, wagon) => sum + wagon.freeSeats, 0);
 
   return (
@@ -34,7 +35,10 @@ const TrainCard = ({ train }) => {
         <div className="seats-info">
           Всього місць: <span className="seats-count">{totalSeats}</span>
         </div>
-        <button className="book-btn">Вибрати потяг</button>
+        {/* Кнопка-посилання на сторінку бронювання конкретного потяга */}
+        <Link to={`/booking/${train.id}`} className="book-btn" style={{ textDecoration: 'none' }}>
+          Вибрати потяг
+        </Link>
       </div>
     </div>
   );
