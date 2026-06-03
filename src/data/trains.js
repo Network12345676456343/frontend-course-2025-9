@@ -1,47 +1,34 @@
 export const trainsData = [
   {
-    id: "743К",
-    number: "743К",
+    id: "1", // Обов'язково в лапках, як рядок!
+    number: "743Л",
     type: "Інтерсіті+",
-    from: "Київ",
+    from: "Київ-Пасажирський",
     to: "Львів",
-    date: "2026-06-04",
     departureTime: "06:19",
-    arrivalTime: "12:15",
-    duration: "5 г. 56 хв.",
+    arrivalTime: "11:47",
+    duration: "5г 28хв",
+    date: "Завтра",
     wagons: [
-      { id: 1, type: "Сидячий 1-клас", freeSeats: 12 },
-      { id: 2, type: "Сидячий 2-клас", freeSeats: 34 }
+      { number: 1, type: "1 клас", totalSeats: 42, freeSeats: 12 },
+      { number: 2, type: "2 клас", totalSeats: 64, freeSeats: 34 },
+      { number: 3, type: "2 клас", totalSeats: 64, freeSeats: 5 }
     ]
   },
   {
-    id: "091К",
+    id: "2", // Обов'язково в лапках!
     number: "091К",
-    type: "Нічний Швидкий",
-    from: "Київ",
+    type: "Нічний Експрес",
+    from: "Київ-Пасажирський",
     to: "Львів",
-    date: "2026-06-04",
     departureTime: "22:37",
     arrivalTime: "06:26",
-    duration: "7 г. 49 хв.",
+    duration: "7г 49хв",
+    date: "Завтра",
     wagons: [
-      { id: 3, type: "Купе", freeSeats: 18 },
-      { id: 4, type: "Плацкарт", freeSeats: 42 }
-    ]
-  },
-  {
-    id: "012К",
-    number: "012К",
-    type: "Нічний Експрес",
-    from: "Львів",
-    to: "Київ",
-    date: "2026-06-05",
-    departureTime: "20:12",
-    arrivalTime: "04:58",
-    duration: "8 г. 46 хв.",
-    wagons: [
-      { id: 5, type: "Люкс", freeSeats: 4 },
-      { id: 6, type: "Купе", freeSeats: 22 }
+      { number: 4, type: "Купе", totalSeats: 36, freeSeats: 18 },
+      { number: 5, type: "Люкс (СВ)", totalSeats: 18, freeSeats: 4 },
+      { number: 6, type: "Купе", totalSeats: 36, freeSeats: 22 }
     ]
   }
 ];
